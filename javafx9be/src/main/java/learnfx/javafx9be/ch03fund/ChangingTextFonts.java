@@ -42,24 +42,21 @@ public class ChangingTextFonts extends Application {
         root.getChildren().add(text2);
 
         // SanSerif
-        posY += 50;
-        Text text3 = new Text(posX, posY, TEXT);
+        Text text3 = new Text(posX, posY += 50, TEXT);
         Font sanSerif = Font.font("SanSerif", SIZE);
         text3.setFont(sanSerif);
         text3.setFill(Color.BLUE);
         root.getChildren().add(text3);
 
         // Dialog
-        posY += 50;
-        Text text4 = new Text(posX, posY, TEXT);
+        Text text4 = new Text(posX, posY += 50, TEXT);
         Font dialogFont = Font.font("Dialog", SIZE);
         text4.setFont(dialogFont);
         text4.setFill(Color.rgb(0, 255, 0));
         root.getChildren().add(text4);
 
         // Dialog
-        posY += 50;
-        Text text5 = new Text(posX, posY, TEXT);
+        Text text5 = new Text(posX, posY + 50, TEXT);
         Font monoFont = Font.font("Monospaced", SIZE);
         text5.setFont(monoFont);
         text5.setFill(Color.BLACK);
