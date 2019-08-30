@@ -1,6 +1,6 @@
-package learnfx.javafx9be.ch04lambda;
+package learnfx.javafx9be.ch04lambda.cats;
 
-public class Cheetah implements Cat, Purrable {
+public class Lion implements Cat, Roarable {
     @Override
     public String getCatKind() {
         return getClass().getSimpleName();
@@ -8,6 +8,6 @@ public class Cheetah implements Cat, Purrable {
 
     @Override
     public String getFurDescription() {
-        return "spotted";
+        return "gold-brown";
     }
 }

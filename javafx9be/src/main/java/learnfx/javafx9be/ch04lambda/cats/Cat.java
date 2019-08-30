@@ -1,4 +1,4 @@
-package learnfx.javafx9be.ch04lambda;
+package learnfx.javafx9be.ch04lambda.cats;
 
 /**
  * Represents an abstract Cat containing default methods common to all cats.

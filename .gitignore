@@ -28,3 +28,7 @@ hs_err_pid*
 **/build/
 **/*.iml
 **/.gradle
+
+# Tmp code files
+**/Tmp*.java
+

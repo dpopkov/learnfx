@@ -1,4 +1,4 @@
-package learnfx.javafx9be.ch04lambda;
+package learnfx.javafx9be.ch04lambda.cats;
 
 public class HouseCat implements Cat, Purrable, Meowler {
     @Override

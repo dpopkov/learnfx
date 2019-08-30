@@ -1,4 +1,4 @@
-package learnfx.javafx9be.ch04lambda;
+package learnfx.javafx9be.ch04lambda.cats;
 
 public class Mixins {
     public static void main(String[] args) {

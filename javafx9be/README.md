@@ -3,6 +3,14 @@ JavaFX 9 Examples
 
 In reversed order.
 
+4: Lambdas and Properties
+-------------------------
+
+### [Form Validation](src/main/java/learnfx/javafx9be/ch04lambda/FormValidation.java)
+
+![FormValidation](img/ch04lambda/FormValidation.png "FormValidation")
+
+
 
 3: JavaFX Fundamentals
 ----------------------
