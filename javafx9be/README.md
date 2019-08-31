@@ -6,7 +6,12 @@ In reversed order.
 5: Layouts and Scene Builder
 ----------------------------
 
-### [GridPane Form Example](src/main/java/learnfx/javafx9be/ch05layouts/GridPaneForm.java)
+### [FXMLContact Form Example](src/main/java/learnfx/javafx9be/ch05layouts/fxmlusage/FXMLContactForm.java)
+
+![FXMLContactForm](img/ch05layouts/FXMLContactForm.png "FXMLContactForm")
+
+
+### [GridPane Form Example](src/main/java/learnfx/javafx9be/ch05layouts/gridpane/GridPaneForm.java)
 
 ![GridPaneForm](img/ch05layouts/GridPaneForm.png "GridPaneForm")
 

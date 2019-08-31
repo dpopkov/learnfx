@@ -1,4 +1,4 @@
-package learnfx.javafx9be.ch05layouts;
+package learnfx.javafx9be.ch05layouts.gridpane;
 
 import javafx.application.Application;
 import javafx.geometry.HPos;
