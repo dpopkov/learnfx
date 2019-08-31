@@ -6,6 +6,10 @@ In reversed order.
 5: Layouts and Scene Builder
 ----------------------------
 
+### [VBox Example](src/main/java/learnfx/javafx9be/ch05layouts/VBoxExample.java)
+
+![VBoxExample](img/ch05layouts/VBoxExample.png "VBoxExample")
+
 ### [HBox Example](src/main/java/learnfx/javafx9be/ch05layouts/HBoxExample.java)
 
 ![HBoxExample](img/ch05layouts/HBoxExample.png "HBoxExample")
