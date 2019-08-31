@@ -3,6 +3,14 @@ JavaFX 9 Examples
 
 In reversed order.
 
+5: Layouts and Scene Builder
+----------------------------
+
+### [HBox Example](src/main/java/learnfx/javafx9be/ch05layouts/HBoxExample.java)
+
+![HBoxExample](img/ch05layouts/HBoxExample.png "HBoxExample")
+
+
 4: Lambdas and Properties
 -------------------------
 
