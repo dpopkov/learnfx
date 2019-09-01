@@ -3,6 +3,14 @@ JavaFX 9 Examples
 
 In reversed order.
 
+6: User Interface Controls
+--------------------------
+
+### [LabelAwesome Example](src/main/java/learnfx/javafx9be/ch06controls/LabelAwesome.java)
+
+![LabelAwesome](img/ch06controls/LabelAwesome.png "LabelAwesome")
+
+
 5: Layouts and Scene Builder
 ----------------------------
 
