@@ -6,6 +6,11 @@ In reversed order.
 6: User Interface Controls
 --------------------------
 
+### [MenuExample](src/main/java/learnfx/javafx9be/ch06controls/MenuExample.java)
+
+![MenuExample](img/ch06controls/MenusExample.png "MenuExample")
+
+
 ### [ButtonFun](src/main/java/learnfx/javafx9be/ch06controls/ButtonFun.java)
 
 ![ButtonFun](img/ch06controls/ButtonFun.png "ButtonFun")
