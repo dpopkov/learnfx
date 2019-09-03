@@ -6,6 +6,11 @@ In reversed order.
 6: User Interface Controls
 --------------------------
 
+### [HeroPicker](src/main/java/learnfx/javafx9be/ch06controls/HeroPicker.java)
+
+![HeroPicker](img/ch06controls/HeroPicker.png "HeroPicker")
+
+
 ### [KeyCombinationsAndContextMenus Example](src/main/java/learnfx/javafx9be/ch06controls/KeyCombinationsAndContextMenus.java)
 
 ![KeyCombinationsAndContextMenus](img/ch06controls/KeyCombinationsAndContextMenus.png "KeyCombinationsAndContextMenus")
