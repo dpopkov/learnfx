@@ -6,6 +6,11 @@ In reversed order.
 6: User Interface Controls
 --------------------------
 
+### [BossesAndEmployees - TableView Example](src/main/java/learnfx/javafx9be/ch06controls/BossesAndEmployees.java)
+
+![BossesAndEmployees](img/ch06controls/BossesAndEmployees.png "BossesAndEmployees")
+
+
 ### [HeroPicker](src/main/java/learnfx/javafx9be/ch06controls/HeroPicker.java)
 
 ![HeroPicker](img/ch06controls/HeroPicker.png "HeroPicker")
