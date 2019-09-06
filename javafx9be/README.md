@@ -1,10 +1,16 @@
-JavaFX 9 Examples
-=================
+JavaFX Examples
+===============
 
 In reversed order.
 
 6: User Interface Controls
 --------------------------
+
+### [BackgroundProcesses Example](src/main/java/learnfx/javafx9be/ch06controls/BackgroundProcesses.java)
+
+![BackgroundProcesses 1](img/ch06controls/BackgroundProcesses_1.png "BackgroundProcesses1")
+![BackgroundProcesses 2](img/ch06controls/BackgroundProcesses_2.png "BackgroundProcesses2")    
+
 
 ### [BossesAndEmployees - TableView Example](src/main/java/learnfx/javafx9be/ch06controls/BossesAndEmployees.java)
 
