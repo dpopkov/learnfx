@@ -3,7 +3,7 @@ package learnfx.javafx9be.ch07graphics.photoviewer;
 import javafx.scene.effect.ColorAdjust;
 
 /**
- * Contains various image display properties.
+ * POJO that contains various image display properties.
  */
 public class ImageInfo {
     private String url;

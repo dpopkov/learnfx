@@ -1,6 +1,8 @@
 package learnfx.javafx9be.ch07graphics.photoviewer;
 
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
@@ -22,7 +24,7 @@ public class ImageViewButtons extends Pane {
         PREV
     }
     /** List of ImageInfo instances. */
-    private List<ImageInfo> imageFiles;
+    private final List<ImageInfo> imageFiles;
 
     private Pane leftButton;
     private Pane rightButton;
@@ -108,5 +110,13 @@ public class ImageViewButtons extends Pane {
     public void addImage(String url) {
         currentIndex++;
         imageFiles.add(currentIndex, new ImageInfo(url));
+    }
+
+    public void setLeftButtonAction(EventHandler<MouseEvent> eventHandler) {
+        leftButton.addEventHandler(MouseEvent.MOUSE_PRESSED, eventHandler);
+    }
+
+    public void setRightButtonAction(EventHandler<MouseEvent> eventHandler) {
+        rightButton.addEventHandler(MouseEvent.MOUSE_PRESSED, eventHandler);
     }
 }
