@@ -166,7 +166,7 @@ public class PhotoViewer extends Application {
         });
     }
 
-    private void loadAndDisplayImage(ProgressIndicator progressIndicator) {
+    protected void loadAndDisplayImage(ProgressIndicator progressIndicator) {
         if (buttonPanel.getCurrentIndex() < 0) {
             return;
         }
@@ -190,7 +190,7 @@ public class PhotoViewer extends Application {
         executorService.submit(loadImage);
     }
 
-    private Task<Image> createWorker(String url) {
+    protected Task<Image> createWorker(String url) {
         return new Task<>() {
             @Override
             protected Image call() {
@@ -269,7 +269,7 @@ public class PhotoViewer extends Application {
     }
 
     /** Update the menu items containing slider controls. */
-    private void updateSliders() {
+    protected void updateSliders() {
         sliderLookupMap.forEach((id, slider) -> {
             switch (id) {
                 case "Hue": slider.setValue(colorAdjust.getHue()); break;
@@ -368,7 +368,7 @@ public class PhotoViewer extends Application {
         });
     }
 
-    private void rotateImageView(double degrees) {
+    protected void rotateImageView(double degrees) {
         rotate.setPivotX(currentImageView.getFitWidth() / 2);
         rotate.setPivotY(currentImageView.getFitHeight() / 2);
         rotate.setAngle(degrees);
