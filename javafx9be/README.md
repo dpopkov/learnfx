@@ -6,6 +6,11 @@ In reversed order.
 7: Graphics
 -----------
 
+### [ClickAndPointGame Example](src/main/java/learnfx/javafx9be/ch07graphics/animation/ClickAndPointGame.java)
+
+![ClickAndPointGame](img/ch07graphics/ClickAndPointGame.png "ClickAndPointGame")
+
+
 ### [PhotoViewer Example](src/main/java/learnfx/javafx9be/ch07graphics/photoviewer/PhotoViewer.java)
 
 ![PhotoViewer](img/ch07graphics/PhotoViewer.png "PhotoViewer")
