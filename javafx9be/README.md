@@ -3,6 +3,14 @@ JavaFX Examples
 
 In reversed order.
 
+8: Printing
+-----------
+
+### [WebDocPrinter Example](src/main/java/learnfx/javafx9be/ch08printing/WebDocPrinter.java)
+
+![WebDocPrinter](img/ch08printing/WebDocPrinter.png "ClickAndPointGame")
+
+
 7: Graphics
 -----------
 
