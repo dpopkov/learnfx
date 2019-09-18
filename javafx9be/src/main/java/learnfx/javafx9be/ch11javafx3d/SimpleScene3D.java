@@ -2,6 +2,7 @@ package learnfx.javafx9be.ch11javafx3d;
 
 import javafx.application.Application;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
@@ -58,6 +59,20 @@ public class SimpleScene3D extends Application {
         primitiveGroup.setRotationAxis(Rotate.Z_AXIS);
         primitiveGroup.setRotate(180);
         sceneRoot.getChildren().addAll(primitiveGroup);
+
+        // Step 2a: Primitive Picking for Primitives
+        scene.setOnMouseClicked(event -> {
+            Node picked = event.getPickResult().getIntersectedNode();
+            if (picked != null) {
+                double scalar = 2.0;
+                if (picked.getScaleX() > 1.0) {
+                    scalar = 1.0;
+                }
+                picked.setScaleX(scalar);
+                picked.setScaleY(scalar);
+                picked.setScaleZ(scalar);
+            }
+        });
 
         stage.setTitle("SimpleScene3D");
         stage.setScene(scene);
