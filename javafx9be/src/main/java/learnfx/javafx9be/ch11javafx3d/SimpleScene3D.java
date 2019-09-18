@@ -13,14 +13,24 @@ import javafx.scene.shape.Sphere;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 
+
 public class SimpleScene3D extends Application {
+    private PerspectiveCamera camera;
+    private final double cameraQuantity = 10.0;
+    private final double cameraModifier = 50.0;
+    private final double rotateModifier = 10;
+    private final double cameraYLimit = 15;
+
+    private double mouseXOld = 0;
+    private double mouseYOld = 0;
+
     @Override
     public void start(Stage stage) {
         Group sceneRoot = new Group();
         final int sceneWidth = 500;
         final int sceneHeight = 300;
         Scene scene = new Scene(sceneRoot, sceneWidth, sceneHeight, Color.WHITE);
-        PerspectiveCamera camera = new PerspectiveCamera(true);
+        camera = new PerspectiveCamera(true);
         camera.setNearClip(0.1);
         camera.setFarClip(10000.0);
         camera.setTranslateZ(-1000);
@@ -74,9 +84,56 @@ public class SimpleScene3D extends Application {
             }
         });
 
+        // Step 2: Add a Movement Keyboard Handler
+        scene.setOnKeyPressed(event -> {
+            double change = cameraQuantity;
+            if (event.isShiftDown()) {
+                change = cameraModifier;
+            }
+            switch (event.getCode()) {
+                case W: camera.setTranslateZ(camera.getTranslateZ() + change); break;
+                case S: camera.setTranslateZ(camera.getTranslateZ() - change); break;
+                case A: camera.setTranslateX(camera.getTranslateX() - change); break;
+                case D: camera.setTranslateX(camera.getTranslateX() + change); break;
+            }
+        });
+
+        // Step 3: Add a Camera Control Mouse Event Handler
+        scene.setOnMouseMoved(event -> {
+            double mouseYNew = event.getSceneY();
+            double mouseXNew = event.getSceneX();
+            double aTan2Y =  mouseYNew - mouseYOld;
+            double aTan2X = mouseXNew - mouseXOld;
+            Rotate xRotate = new Rotate();
+            Rotate yRotate = new Rotate();
+            if (mouseYNew != mouseYOld) {
+                xRotate = cameraRotationOnXAxis(aTan2Y, aTan2X);
+            }
+            if(mouseXNew != mouseXOld) {
+                yRotate = cameraRotationOnYAxis(aTan2Y, aTan2X);
+            }
+            camera.getTransforms().addAll(xRotate,yRotate);
+            mouseXOld = mouseXNew;
+            mouseYOld = mouseYNew;
+        });
+
         stage.setTitle("SimpleScene3D");
         stage.setScene(scene);
         stage.show();
+    }
+
+    private Rotate cameraRotationOnYAxis(double aTan2Y, double aTan2X) {
+        camera.setRotationAxis(Rotate.Y_AXIS);
+        double yawRotate = camera.getRotate() + (Math.atan2(aTan2X, aTan2Y) / rotateModifier);
+        return new Rotate(yawRotate, Rotate.Y_AXIS);
+    }
+
+    private Rotate cameraRotationOnXAxis(double aTan2Y, double aTan2X) {
+        camera.setRotationAxis(Rotate.X_AXIS);
+        double pitchRotate = camera.getRotate() + (Math.atan2(aTan2Y, aTan2X) / rotateModifier);
+        pitchRotate = Math.min(pitchRotate, cameraYLimit);
+        pitchRotate = Math.max(pitchRotate, -cameraYLimit);
+        return new Rotate(pitchRotate, Rotate.X_AXIS);
     }
 
     private PhongMaterial createMaterial(Color diffuseColor, Color specularColor) {
